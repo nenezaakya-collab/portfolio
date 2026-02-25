@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>★ nainai - kumada kanako's homepage ★</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+<!-- Floating decorations -->
+<div class="deco-float">✧</div>
+<div class="deco-float">♡</div>
+<div class="deco-float">☆</div>
+<div class="deco-float">✦</div>
+<div class="deco-float">♪</div>
+
+<!-- Starfield background -->
+<div class="starfield" id="starfield"></div>
+
+<!-- Scanlines overlay -->
+<div class="scanlines"></div>
+
+<!-- Main content -->
+<div class="main-wrapper">
+
+  <!-- Marquee -->
+  <div class="top-marquee">
+    <div class="marquee-inner">
+      <span>★ nainai - 心のモヤモヤを手放すマインドフルネスアプリ ★ 書いて、込めて、手放す ★ nainai ★</span>
+      <span>★ nainai - 心のモヤモヤを手放すマインドフルネスアプリ ★ 書いて、込めて、手放す ★ nainai ★</span>
+    </div>
+  </div>
+
+  <!-- App Hero -->
+  <div class="app-hero">
+    <span class="app-hero-emoji">🔮</span>
+    <div class="app-hero-title">nainai（ナイナイ）</div>
+    <div class="app-hero-sub">♡ 心のモヤモヤを手放すマインドフルネスアプリ ♡</div>
+    <div class="sparkle-divider">✧ ✦ ✧ ✦ ✧ ✦ ✧</div>
+  </div>
+
+  <hr class="pixel-hr">
+
+  <!-- ===== ABOUT WINDOW ===== -->
+  <div class="section-label">★ APP DETAIL ★</div>
+  <div class="win-window">
+    <div class="win-titlebar">
+      <span class="win-titlebar-text"><span class="icon">🔮</span> nainai_detail.txt</span>
+      <div class="win-buttons">
+        <button class="win-btn">_</button>
+        <button class="win-btn">□</button>
+        <button class="win-btn">×</button>
+      </div>
+    </div>
+    <div class="win-body">
+      <div class="detail-content">
+
+        <h2>📖 アプリ概要</h2>
+        <p>
+          <strong>nainai（ナイナイ）</strong>は、不安や悩みを書き出し、光る球体（オーブ）に込めて宇宙へ投げ放つマインドフルネスアプリです。
+        </p>
+        <p>
+          心のモヤモヤを「書いて捨てる」というセラピー的な行為を、美しいデジタル体験に昇華しました。星空の中で光るオーブをドラッグして飛ばす、その一連の流れが心を軽くしてくれます。
+        </p>
+
+        <h2>💡 コンセプト・背景</h2>
+        <p>
+          「紙に書いて破って捨てる」というストレス解消法は古くから知られています。nainaiはこのセラピー的行為をデジタルで再現し、さらに美しいビジュアル体験を加えることで、心のケアをより身近で心地よいものにしました。
+        </p>
+        <p>
+          誰にも見せなくていい。ただ書いて、込めて、手放す――それだけで少し楽になれる。そんな体験を目指しています。
+        </p>
+
+        <h2>🚀 ユーザーフロー</h2>
+        <div class="flow-steps">
+          <div class="flow-step">
+            <span class="flow-step-num">STEP 1</span>
+            <span class="flow-step-emoji">👋</span>
+            オンボーディング<br>使い方の案内
+          </div>
+          <div class="flow-step">
+            <span class="flow-step-num">STEP 2</span>
+            <span class="flow-step-emoji">✍️</span>
+            入力フェーズ<br>モヤモヤを書き出す
+          </div>
+          <div class="flow-step">
+            <span class="flow-step-num">STEP 3</span>
+            <span class="flow-step-emoji">🔮</span>
+            オーブ操作<br>ドラッグ&スローで飛ばす
+          </div>
+          <div class="flow-step">
+            <span class="flow-step-num">STEP 4</span>
+            <span class="flow-step-emoji">✨</span>
+            完了<br>パーティクルと共に消える
+          </div>
+        </div>
+
+        <h2>⚡ 主な機能</h2>
+        <ul>
+          <li>ドラッグ＆スロー操作でオーブを宇宙へ投げる</li>
+          <li>パーティクルエフェクト（オーブが消える際の美しい演出）</li>
+          <li>星空アニメーション背景</li>
+          <li>効果音（Web Audio API）による没入感</li>
+          <li>日本語・英語の切り替え対応</li>
+          <li>PWA対応（ホーム画面に追加可能）</li>
+          <li>オフラインでも動作</li>
+        </ul>
+
+        <h2>🛠 技術スタック</h2>
+        <div class="tech-tags">
+          <span class="tech-tag">Vanilla JS</span>
+          <span class="tech-tag">Canvas API</span>
+          <span class="tech-tag">Web Audio API</span>
+          <span class="tech-tag">PWA</span>
+          <span class="tech-tag">CSS Animations</span>
+        </div>
+
+        <h2>✦ こだわりポイント</h2>
+        <ul class="kodawari-list">
+          <li>ゼロ依存 ― フレームワークを使わず、Vanilla JSのみで構築。軽量で高速</li>
+          <li>プライバシー配慮 ― 入力内容はサーバーに送信されず、どこにも保存されない</li>
+          <li>物理演算風インタラクション ― ドラッグの速度と角度に応じたオーブの挙動を実現</li>
+          <li>Canvas APIによるリアルタイム描画 ― 星空・オーブ・パーティクルを滑らかに描画</li>
+          <li>Web Audio APIによる効果音 ― 外部ファイル不要のプログラム生成サウンド</li>
+        </ul>
+
+      </div>
+    </div>
+    <div class="status-bar">
+      <span>🔮 nainai v1.0</span>
+      <span>Vanilla JS / Canvas / PWA</span>
+    </div>
+  </div>
+
+  <hr class="pixel-hr">
+
+  <!-- Action Buttons -->
+  <div class="action-buttons">
+    <a href="https://nainai-chi.vercel.app/" target="_blank" rel="noopener" class="action-btn action-btn-primary">OPEN APP →</a>
+    <a href="index.html" class="action-btn action-btn-secondary">← HOME に戻る</a>
+  </div>
+
+  <hr class="pixel-hr">
+
+  <!-- Footer -->
+  <footer style="text-align: center; padding: 20px;">
+    <p style="font-family: 'DotGothic16', monospace; font-size: 13px; color: #5c3580; line-height: 2;">
+      ☆ Thanks for visiting! ☆<br>
+      <a href="index.html" style="color: #5c3580; text-decoration: none;">♡ kumada kanako's homepage ♡</a>
+    </p>
+    <div style="margin-top: 10px; font-size: 20px; letter-spacing: 6px;">
+      ✧♡☆♡✧
+    </div>
+  </footer>
+
+</div>
+
+<script>
+// ===== Generate starfield =====
+(function() {
+  const sf = document.getElementById('starfield');
+  const count = 80;
+  for (let i = 0; i < count; i++) {
+    const star = document.createElement('div');
+    star.className = 'star';
+    star.style.left = Math.random() * 100 + '%';
+    star.style.top = Math.random() * 100 + '%';
+    star.style.setProperty('--dur', (1.5 + Math.random() * 3) + 's');
+    star.style.animationDelay = (Math.random() * 3) + 's';
+    const size = Math.random() > 0.8 ? 3 : (Math.random() > 0.5 ? 2 : 1);
+    star.style.width = size + 'px';
+    star.style.height = size + 'px';
+    const colors = ['#fff', '#ffddee', '#eeddff', '#ddeeff', '#ffffdd'];
+    star.style.background = colors[Math.floor(Math.random() * colors.length)];
+    sf.appendChild(star);
+  }
+})();
+
+// ===== Cursor trail effect =====
+(function() {
+  const colors = ['#ffaacc', '#aaeeff', '#ffffcc', '#ddbbff', '#ccddff'];
+  let throttle = false;
+  document.addEventListener('mousemove', function(e) {
+    if (throttle) return;
+    throttle = true;
+    setTimeout(() => throttle = false, 60);
+    const dot = document.createElement('div');
+    dot.className = 'trail-dot';
+    dot.style.left = e.clientX + 'px';
+    dot.style.top = e.clientY + 'px';
+    dot.style.background = colors[Math.floor(Math.random() * colors.length)];
+    document.body.appendChild(dot);
+    setTimeout(() => dot.remove(), 500);
+  });
+})();
+</script>
+
+</body>
+</html>

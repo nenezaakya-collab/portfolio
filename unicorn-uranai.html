@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>★ 無責任ポジティブ占い - kumada kanako's homepage ★</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+<!-- Floating decorations -->
+<div class="deco-float">✧</div>
+<div class="deco-float">♡</div>
+<div class="deco-float">☆</div>
+<div class="deco-float">✦</div>
+<div class="deco-float">♪</div>
+
+<!-- Starfield background -->
+<div class="starfield" id="starfield"></div>
+
+<!-- Scanlines overlay -->
+<div class="scanlines"></div>
+
+<!-- Main content -->
+<div class="main-wrapper">
+
+  <!-- Marquee -->
+  <div class="top-marquee">
+    <div class="marquee-inner">
+      <span>★ ユニコーンちゃんの無責任ポジティブ占い ★ 都合のいいことしか言わない ★ 知らんけど！ ★</span>
+      <span>★ ユニコーンちゃんの無責任ポジティブ占い ★ 都合のいいことしか言わない ★ 知らんけど！ ★</span>
+    </div>
+  </div>
+
+  <!-- App Hero -->
+  <div class="app-hero">
+    <span class="app-hero-emoji">🦄</span>
+    <div class="app-hero-title">無責任ポジティブ占い</div>
+    <div class="app-hero-sub">♡ 都合のいいことしか言わないタロット占い ♡</div>
+    <div class="sparkle-divider">✧ ✦ ✧ ✦ ✧ ✦ ✧</div>
+  </div>
+
+  <hr class="pixel-hr">
+
+  <!-- ===== DETAIL WINDOW ===== -->
+  <div class="section-label">★ APP DETAIL ★</div>
+  <div class="win-window">
+    <div class="win-titlebar">
+      <span class="win-titlebar-text"><span class="icon">🦄</span> unicorn_uranai_detail.txt</span>
+      <div class="win-buttons">
+        <button class="win-btn">_</button>
+        <button class="win-btn">□</button>
+        <button class="win-btn">×</button>
+      </div>
+    </div>
+    <div class="win-body">
+      <div class="detail-content">
+
+        <h2>📖 アプリ概要</h2>
+        <p>
+          <strong>ユニコーンちゃんの無責任ポジティブ占い</strong>は、「都合のいいことしか言わない」タロット占いアプリです。
+        </p>
+        <p>
+          ユニコーンちゃんというキャラクターが、宇宙に聞いてきた（という体の）占い結果を教えてくれます。ネガティブな結果は一切なし。どんなカードが出ても全力でポジティブに変換してくれる、無責任だけど元気が出る占いアプリです。
+        </p>
+
+        <h2>💡 コンセプト</h2>
+        <ul>
+          <li>ネガティブなことは一切言わない</li>
+          <li>「気をつけて」「注意」系のフレーズもNG</li>
+          <li>ラッキー度は必ず星4以上</li>
+          <li>最後は「知らんけど！」で締める</li>
+        </ul>
+        <p>
+          占いに正確性を求めるのではなく、「ちょっと元気が出る」「友達にシェアして笑える」をゴールにしています。
+        </p>
+
+        <h2>🚀 ユーザーフロー</h2>
+        <div class="flow-steps">
+          <div class="flow-step">
+            <span class="flow-step-num">STEP 1</span>
+            <span class="flow-step-emoji">🦄</span>
+            トップ画面<br>ユニコーンちゃんがお出迎え
+          </div>
+          <div class="flow-step">
+            <span class="flow-step-num">STEP 2</span>
+            <span class="flow-step-emoji">🔮</span>
+            ジャンル選択<br>恋愛運・仕事運・総合運から選ぶ
+          </div>
+          <div class="flow-step">
+            <span class="flow-step-num">STEP 3</span>
+            <span class="flow-step-emoji">🃏</span>
+            カードシャッフル<br>直感で1枚選ぶ
+          </div>
+          <div class="flow-step">
+            <span class="flow-step-num">STEP 4</span>
+            <span class="flow-step-emoji">✨</span>
+            カードリビール<br>3Dフリップで表に
+          </div>
+          <div class="flow-step">
+            <span class="flow-step-num">STEP 5</span>
+            <span class="flow-step-emoji">💬</span>
+            占い結果<br>ポジティブ全開で語る
+          </div>
+          <div class="flow-step">
+            <span class="flow-step-num">STEP 6</span>
+            <span class="flow-step-emoji">📤</span>
+            シェア<br>カード画像を自動生成
+          </div>
+        </div>
+
+        <h2>⚡ 主な機能</h2>
+        <ul>
+          <li>大アルカナ22枚収録（すべてポジティブ解釈のみ）</li>
+          <li>Claude APIによる占い文の動的生成</li>
+          <li>3Dカードフリップアニメーション（キラキラパーティクル付き）</li>
+          <li>グラスモーフィズム＋パステルカラーのファンタジーUI</li>
+          <li>シェアカード画像の自動生成（X・LINE・画像保存対応）</li>
+          <li>APIフォールバック（API無しでも動作）</li>
+          <li>PWA対応（ホーム画面に追加可能）</li>
+        </ul>
+
+        <h2>🛠 技術スタック</h2>
+        <div class="tech-tags">
+          <span class="tech-tag">Next.js 16</span>
+          <span class="tech-tag">React 19</span>
+          <span class="tech-tag">Tailwind CSS 4</span>
+          <span class="tech-tag">Framer Motion</span>
+          <span class="tech-tag">Claude API</span>
+          <span class="tech-tag">html2canvas</span>
+          <span class="tech-tag">PWA</span>
+        </div>
+
+        <h2>✦ こだわりポイント</h2>
+        <ul class="kodawari-list">
+          <li>AIによる占い文生成 ― Claude APIでユニコーンちゃんのキャラ設定（タメ口、ゆるいスピリチュアル系、根拠ゼロフレーズ多用）を定義し、選ばれたカードとジャンルに応じた占い文をJSON形式で動的に生成</li>
+          <li>グラスモーフィズム + ファンタジーUI ― パステルカラーのグラデーション背景にすりガラス風の半透明エフェクトを多用。虹色グラデーションが流れるボタンアニメーション</li>
+          <li>カードフリップアニメーション ― CSSのperspectiveとbackface-visibility、Framer MotionのrotateYを組み合わせた3Dフリップ演出。キラキラのパーティクルも飛ぶ</li>
+          <li>シェア画像の自動生成 ― html2canvasで占い結果をカード風の画像（480x720px）に変換。カード名、占い文、ラッキーアイテム、ラッキー度をレイアウト</li>
+          <li>怖いカードも安心設計 ― 「死神」は「再生・変容・新しい始まり」、「塔」は「突破・古い殻を破る・劇的な好転」、「悪魔」は「情熱・魅力・欲望を力に変える」</li>
+        </ul>
+
+        <h2>🃏 タロットカード</h2>
+        <p>
+          大アルカナ22枚を収録。カードのイラストもすべて生成AIで作成しています。すべてのカードにポジティブな解釈のみを設定しています。
+        </p>
+        <p>
+          例えば「死神」は「再生・変容・新しい始まり」、「塔」は「突破・古い殻を破る・劇的な好転」、「悪魔」は「情熱・魅力・欲望を力に変える」。怖いカードが出ても安心の設計です。
+        </p>
+
+        <h2>💭 つくってみて</h2>
+        <p>
+          占い結果がどんなカードでもポジティブに変換されるのが面白くて、自分でも何回も遊んでしまいました。「知らんけど！」で締まる無責任さが、逆に気軽に楽しめるポイントになっていると思います。
+        </p>
+
+      </div>
+    </div>
+    <div class="status-bar">
+      <span>🦄 無責任ポジティブ占い v1.0</span>
+      <span>Next.js / Claude API / PWA</span>
+    </div>
+  </div>
+
+  <hr class="pixel-hr">
+
+  <!-- Action Buttons -->
+  <div class="action-buttons">
+    <a href="https://unicorn-tarot-app.vercel.app/" target="_blank" rel="noopener" class="action-btn action-btn-primary">OPEN APP →</a>
+    <a href="index.html" class="action-btn action-btn-secondary">← HOME に戻る</a>
+  </div>
+
+  <hr class="pixel-hr">
+
+  <!-- Footer -->
+  <footer style="text-align: center; padding: 20px;">
+    <p style="font-family: 'DotGothic16', monospace; font-size: 13px; color: #5c3580; line-height: 2;">
+      ☆ Thanks for visiting! ☆<br>
+      <a href="index.html" style="color: #5c3580; text-decoration: none;">♡ kumada kanako's homepage ♡</a>
+    </p>
+    <div style="margin-top: 10px; font-size: 20px; letter-spacing: 6px;">
+      ✧♡☆♡✧
+    </div>
+  </footer>
+
+</div>
+
+<script>
+// ===== Generate starfield =====
+(function() {
+  const sf = document.getElementById('starfield');
+  const count = 80;
+  for (let i = 0; i < count; i++) {
+    const star = document.createElement('div');
+    star.className = 'star';
+    star.style.left = Math.random() * 100 + '%';
+    star.style.top = Math.random() * 100 + '%';
+    star.style.setProperty('--dur', (1.5 + Math.random() * 3) + 's');
+    star.style.animationDelay = (Math.random() * 3) + 's';
+    const size = Math.random() > 0.8 ? 3 : (Math.random() > 0.5 ? 2 : 1);
+    star.style.width = size + 'px';
+    star.style.height = size + 'px';
+    const colors = ['#fff', '#ffddee', '#eeddff', '#ddeeff', '#ffffdd'];
+    star.style.background = colors[Math.floor(Math.random() * colors.length)];
+    sf.appendChild(star);
+  }
+})();
+
+// ===== Cursor trail effect =====
+(function() {
+  const colors = ['#ffaacc', '#aaeeff', '#ffffcc', '#ddbbff', '#ccddff'];
+  let throttle = false;
+  document.addEventListener('mousemove', function(e) {
+    if (throttle) return;
+    throttle = true;
+    setTimeout(() => throttle = false, 60);
+    const dot = document.createElement('div');
+    dot.className = 'trail-dot';
+    dot.style.left = e.clientX + 'px';
+    dot.style.top = e.clientY + 'px';
+    dot.style.background = colors[Math.floor(Math.random() * colors.length)];
+    document.body.appendChild(dot);
+    setTimeout(() => dot.remove(), 500);
+  });
+})();
+</script>
+
+</body>
+</html>

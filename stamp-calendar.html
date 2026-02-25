@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>★ Stamp Calendar - kumada kanako's homepage ★</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body class="page-stamp-calendar">
+
+<!-- Floating decorations -->
+<div class="deco-float">✧</div>
+<div class="deco-float">♡</div>
+<div class="deco-float">☆</div>
+<div class="deco-float">✦</div>
+<div class="deco-float">♪</div>
+
+<!-- Starfield background -->
+<div class="starfield" id="starfield"></div>
+
+<!-- Scanlines overlay -->
+<div class="scanlines"></div>
+
+<!-- Main content -->
+<div class="main-wrapper">
+
+  <!-- Marquee -->
+  <div class="top-marquee">
+    <div class="marquee-inner">
+      <span>★ Stamp Calendar - 絵文字スタンプで毎日を記録 ★ かわいく記録しよう ★ Stamp Calendar ★</span>
+      <span>★ Stamp Calendar - 絵文字スタンプで毎日を記録 ★ かわいく記録しよう ★ Stamp Calendar ★</span>
+    </div>
+  </div>
+
+  <!-- App Hero -->
+  <div class="app-hero">
+    <span class="app-hero-emoji">📅</span>
+    <div class="app-hero-title">Stamp Calendar</div>
+    <div class="app-hero-sub">♡ 絵文字スタンプで毎日を記録するカレンダーアプリ ♡</div>
+    <div class="sparkle-divider">✧ ✦ ✧ ✦ ✧ ✦ ✧</div>
+  </div>
+
+  <hr class="pixel-hr">
+
+  <!-- ===== ABOUT WINDOW ===== -->
+  <div class="section-label">★ APP DETAIL ★</div>
+  <div class="win-window">
+    <div class="win-titlebar">
+      <span class="win-titlebar-text"><span class="icon">📅</span> stamp_calendar_detail.txt</span>
+      <div class="win-buttons">
+        <button class="win-btn">_</button>
+        <button class="win-btn">□</button>
+        <button class="win-btn">×</button>
+      </div>
+    </div>
+    <div class="win-body">
+      <div class="detail-content">
+
+        <h2>📖 アプリ概要</h2>
+        <p>
+          <strong>Stamp Calendar</strong>は、絵文字スタンプで毎日の活動や気分を記録する、かわいいカレンダーアプリです。
+        </p>
+        <p>
+          日付をタップしてスタンプを選ぶだけのシンプルな操作で、日々の習慣や気持ちを手軽に記録できます。振り返ると、カレンダーがカラフルなスタンプで埋まっていく楽しさがあります。
+        </p>
+
+        <h2>💡 コンセプト・背景</h2>
+        <p>
+          「毎日を記録する」というのは、続けるのが難しいもの。Stamp Calendarは、絵文字スタンプを「ぽん」と押すだけの最小限のアクションで記録できるようにすることで、無理なく続けられる日記・習慣トラッカーを目指しました。
+        </p>
+        <p>
+          文章を書く必要はなし。スタンプ1つで、その日の自分を振り返ることができます。
+        </p>
+
+        <h2>🚀 ユーザーフロー</h2>
+        <div class="flow-steps">
+          <div class="flow-step">
+            <span class="flow-step-num">STEP 1</span>
+            <span class="flow-step-emoji">📅</span>
+            カレンダー表示<br>月ごとのビュー
+          </div>
+          <div class="flow-step">
+            <span class="flow-step-num">STEP 2</span>
+            <span class="flow-step-emoji">👆</span>
+            日付をタップ<br>記録したい日を選択
+          </div>
+          <div class="flow-step">
+            <span class="flow-step-num">STEP 3</span>
+            <span class="flow-step-emoji">😊</span>
+            スタンプ選択<br>絵文字を選んでぽん
+          </div>
+          <div class="flow-step">
+            <span class="flow-step-num">STEP 4</span>
+            <span class="flow-step-emoji">📝</span>
+            メモ入力（任意）<br>ひとことを追加
+          </div>
+        </div>
+
+        <h2>⚡ 主な機能</h2>
+        <ul>
+          <li>デフォルト20種のスタンプ＋カスタムスタンプ追加</li>
+          <li>日付ごとのメモ機能</li>
+          <li>5種類のカラーテーマ切り替え</li>
+          <li>日本の祝日表示対応</li>
+          <li>スワイプで月を切り替え</li>
+          <li>PWA対応（ホーム画面に追加可能）</li>
+          <li>localStorageによるオフライン保存</li>
+        </ul>
+
+        <h2>🛠 技術スタック</h2>
+        <div class="tech-tags">
+          <span class="tech-tag">React 19</span>
+          <span class="tech-tag">Vite 7</span>
+          <span class="tech-tag">Tailwind CSS 4</span>
+          <span class="tech-tag">date-fns</span>
+          <span class="tech-tag">PWA</span>
+          <span class="tech-tag">localStorage</span>
+        </div>
+
+        <h2>✦ こだわりポイント</h2>
+        <ul class="kodawari-list">
+          <li>かわいいUI ― 丸みのあるデザインと心地よいアニメーションで、使うたびに楽しくなる</li>
+          <li>WCAG AA準拠 ― アクセシビリティに配慮したコントラスト比と操作性</li>
+          <li>日本特化 ― 日本の祝日表示、曜日の日本語表記に対応</li>
+          <li>テーマ機能 ― 5種類のカラーテーマで自分好みにカスタマイズ</li>
+          <li>軽量設計 ― 必要最小限の依存で、サクサク動作</li>
+        </ul>
+
+      </div>
+    </div>
+    <div class="status-bar">
+      <span>📅 Stamp Calendar v1.0</span>
+      <span>React 19 / Vite / PWA</span>
+    </div>
+  </div>
+
+  <hr class="pixel-hr">
+
+  <!-- Action Buttons -->
+  <div class="action-buttons">
+    <a href="https://stamp-calendar.vercel.app/" target="_blank" rel="noopener" class="action-btn action-btn-primary">OPEN APP →</a>
+    <a href="index.html" class="action-btn action-btn-secondary">← HOME に戻る</a>
+  </div>
+
+  <hr class="pixel-hr">
+
+  <!-- Footer -->
+  <footer style="text-align: center; padding: 20px;">
+    <p style="font-family: 'DotGothic16', monospace; font-size: 13px; color: #5c3580; line-height: 2;">
+      ☆ Thanks for visiting! ☆<br>
+      <a href="index.html" style="color: #5c3580; text-decoration: none;">♡ kumada kanako's homepage ♡</a>
+    </p>
+    <div style="margin-top: 10px; font-size: 20px; letter-spacing: 6px;">
+      ✧♡☆♡✧
+    </div>
+  </footer>
+
+</div>
+
+<script>
+// ===== Generate starfield =====
+(function() {
+  const sf = document.getElementById('starfield');
+  const count = 80;
+  for (let i = 0; i < count; i++) {
+    const star = document.createElement('div');
+    star.className = 'star';
+    star.style.left = Math.random() * 100 + '%';
+    star.style.top = Math.random() * 100 + '%';
+    star.style.setProperty('--dur', (1.5 + Math.random() * 3) + 's');
+    star.style.animationDelay = (Math.random() * 3) + 's';
+    const size = Math.random() > 0.8 ? 3 : (Math.random() > 0.5 ? 2 : 1);
+    star.style.width = size + 'px';
+    star.style.height = size + 'px';
+    const colors = ['#fff', '#ffddee', '#eeddff', '#ddeeff', '#ffffdd'];
+    star.style.background = colors[Math.floor(Math.random() * colors.length)];
+    sf.appendChild(star);
+  }
+})();
+
+// ===== Cursor trail effect =====
+(function() {
+  const colors = ['#ffaacc', '#aaeeff', '#ffffcc', '#ddbbff', '#ccddff'];
+  let throttle = false;
+  document.addEventListener('mousemove', function(e) {
+    if (throttle) return;
+    throttle = true;
+    setTimeout(() => throttle = false, 60);
+    const dot = document.createElement('div');
+    dot.className = 'trail-dot';
+    dot.style.left = e.clientX + 'px';
+    dot.style.top = e.clientY + 'px';
+    dot.style.background = colors[Math.floor(Math.random() * colors.length)];
+    document.body.appendChild(dot);
+    setTimeout(() => dot.remove(), 500);
+  });
+})();
+</script>
+
+</body>
+</html>
