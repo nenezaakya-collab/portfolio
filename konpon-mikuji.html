@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>★ コンポンみくじ - kumada kanako's homepage ★</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+<!-- Floating decorations -->
+<div class="deco-float">✧</div>
+<div class="deco-float">♡</div>
+<div class="deco-float">☆</div>
+<div class="deco-float">✦</div>
+<div class="deco-float">♪</div>
+
+<!-- Starfield background -->
+<div class="starfield" id="starfield"></div>
+
+<!-- Scanlines overlay -->
+<div class="scanlines"></div>
+
+<!-- Main content -->
+<div class="main-wrapper">
+
+  <!-- Marquee -->
+  <div class="top-marquee">
+    <div class="marquee-inner">
+      <span>★ コンポンみくじ - きつねとたぬきのゆるかわ和菓子おみくじ ★ 毎日の運勢をお届け ★ コンポンみくじ ★</span>
+      <span>★ コンポンみくじ - きつねとたぬきのゆるかわ和菓子おみくじ ★ 毎日の運勢をお届け ★ コンポンみくじ ★</span>
+    </div>
+  </div>
+
+  <!-- App Hero -->
+  <div class="app-hero">
+    <img class="app-hero-emoji" src="Images/konpon.webp" alt="コンポンみくじ">
+    <div class="app-hero-title">コンポンみくじ</div>
+    <div class="app-hero-sub">♡ きつねとたぬきのゆるかわ和菓子おみくじ ♡</div>
+    <div class="sparkle-divider">✧ ✦ ✧ ✦ ✧ ✦ ✧</div>
+  </div>
+
+  <hr class="pixel-hr">
+
+  <!-- ===== DETAIL WINDOW ===== -->
+  <div class="section-label">★ APP DETAIL ★</div>
+  <div class="win-window">
+    <div class="win-titlebar">
+      <span class="win-titlebar-text"><span class="icon">🔮</span> konpon_mikuji_detail.txt</span>
+      <div class="win-buttons">
+        <button class="win-btn">_</button>
+        <button class="win-btn">□</button>
+        <button class="win-btn">×</button>
+      </div>
+    </div>
+    <div class="win-body">
+      <div class="detail-content">
+
+        <h2>📖 アプリ概要</h2>
+        <p>
+          <strong>コンポンみくじ</strong>は、しっかり者のきつね「コン」と食いしん坊で気まぐれなたぬき「ポン」が毎日の運勢を届ける、和菓子カラーのゆるかわおみくじWebアプリです。
+        </p>
+        <p>
+          おみくじ筒をシャカシャカ振ると、大吉〜凶の6段階の運勢が登場。コンの助言とポンの和菓子トーク、ラッキーフード＆ラッキーカラーが毎日の小さな楽しみを届けます。日本語・英語に対応。
+        </p>
+
+        <h2>💡 コンセプト・背景</h2>
+        <p>
+          「朝のちょっとした占い」をもっとかわいく、もっと温かくしたいという想いから生まれました。キャラクターの掛け合いやラッキーフードを通して、占い結果がどんな運勢でもほっこりする体験を目指しています。
+        </p>
+        <p>
+          和菓子をモチーフにしたカラーパレット（コーラル・藤色・抹茶・金色）と、Zen Maru Gothic＆Shippori Mincho のフォントで、やわらかい和の世界観を表現しました。
+        </p>
+
+        <h2>🚀 ユーザーフロー</h2>
+        <div class="flow-steps">
+          <div class="flow-step">
+            <span class="flow-step-num">STEP 1</span>
+            <span class="flow-step-emoji">🦊</span>
+            TOPページ<br>コン＆ポンがお出迎え
+          </div>
+          <div class="flow-step">
+            <span class="flow-step-num">STEP 2</span>
+            <span class="flow-step-emoji">🎋</span>
+            シャカシャカ演出<br>おみくじ筒を3回振る
+          </div>
+          <div class="flow-step">
+            <span class="flow-step-num">STEP 3</span>
+            <span class="flow-step-emoji">✨</span>
+            棒が登場<br>フラッシュ＆光の輪エフェクト
+          </div>
+          <div class="flow-step">
+            <span class="flow-step-num">STEP 4</span>
+            <span class="flow-step-emoji">🍡</span>
+            結果表示<br>運勢・メッセージ・ラッキーフード
+          </div>
+        </div>
+
+        <h2>⚡ 主な機能</h2>
+        <ul>
+          <li>6段階の運勢（大吉・吉・中吉・小吉・末吉・凶）を日付ベースのシード乱数で決定</li>
+          <li>コンの助言＋ポンの和菓子コメントのチャット吹き出し風メッセージ</li>
+          <li>ラッキーフード＆ラッキーカラー（色見本付き）の表示</li>
+          <li>大吉時の紙吹雪（Confetti）＆桜の花びらアニメーション</li>
+          <li>シャカシャカ演出（バイブレーション・フラッシュ・キラキラパーティクル）</li>
+          <li>SNSシェア（X / LINE）＆ html2canvas による結果画像保存</li>
+          <li>1日1回制限（localStorage）</li>
+          <li>日本語・英語の切り替え対応</li>
+          <li>PWA対応（ホーム画面に追加可能）</li>
+        </ul>
+
+        <h2>🛠 技術スタック</h2>
+        <div class="tech-tags">
+          <span class="tech-tag">Next.js 16 (App Router)</span>
+          <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">Tailwind CSS v4</span>
+          <span class="tech-tag">Framer Motion</span>
+          <span class="tech-tag">html2canvas</span>
+          <span class="tech-tag">PWA</span>
+        </div>
+
+        <h2>✦ こだわりポイント</h2>
+        <ul class="kodawari-list">
+          <li>和菓子カラーパレット ― コーラル・藤色・抹茶・金色をベースにした温かみのある配色設計</li>
+          <li>キャラクターの掛け合い ― コンの丁寧な助言とポンのゆるいコメントで、どの運勢でもほっこり</li>
+          <li>同じ日は同じ結果 ― 日付シードの乱数で運勢を決定し、何度開いても同じ結果に</li>
+          <li>シャカシャカ演出 ― おみくじ筒を振る体験をバイブレーション・フラッシュ・パーティクルで再現</li>
+          <li>大吉の特別演出 ― 紙吹雪40個＋桜の花びら3倍の豪華エフェクト</li>
+          <li>画像最適化 ― 元PNG 27MBをWebP 204KB（99.3%削減）に圧縮</li>
+          <li>Tailwind v4のlab()カラー問題 ― html2canvasのoncloneでrgbaに上書きして回避</li>
+        </ul>
+
+      </div>
+    </div>
+    <div class="status-bar">
+      <span>🦊 コンポンみくじ v1.0</span>
+      <span>Next.js / TypeScript / Tailwind v4</span>
+    </div>
+  </div>
+
+  <hr class="pixel-hr">
+
+  <!-- Action Buttons -->
+  <div class="action-buttons">
+    <a href="https://kon-pon-mikuji.vercel.app" target="_blank" rel="noopener" class="action-btn action-btn-primary">OPEN APP →</a>
+    <a href="index.html" class="action-btn action-btn-secondary">← HOME に戻る</a>
+  </div>
+
+  <hr class="pixel-hr">
+
+  <!-- Footer -->
+  <footer style="text-align: center; padding: 20px;">
+    <p style="font-family: 'DotGothic16', monospace; font-size: 13px; color: #5c3580; line-height: 2;">
+      ☆ Thanks for visiting! ☆<br>
+      <a href="index.html" style="color: #5c3580; text-decoration: none;">♡ kumada kanako's homepage ♡</a>
+    </p>
+    <div style="margin-top: 10px; font-size: 20px; letter-spacing: 6px;">
+      ✧♡☆♡✧
+    </div>
+  </footer>
+
+</div>
+
+<script>
+// ===== Generate starfield =====
+(function() {
+  const sf = document.getElementById('starfield');
+  const count = 80;
+  for (let i = 0; i < count; i++) {
+    const star = document.createElement('div');
+    star.className = 'star';
+    star.style.left = Math.random() * 100 + '%';
+    star.style.top = Math.random() * 100 + '%';
+    star.style.setProperty('--dur', (1.5 + Math.random() * 3) + 's');
+    star.style.animationDelay = (Math.random() * 3) + 's';
+    const size = Math.random() > 0.8 ? 3 : (Math.random() > 0.5 ? 2 : 1);
+    star.style.width = size + 'px';
+    star.style.height = size + 'px';
+    const colors = ['#fff', '#ffddee', '#eeddff', '#ddeeff', '#ffffdd'];
+    star.style.background = colors[Math.floor(Math.random() * colors.length)];
+    sf.appendChild(star);
+  }
+})();
+
+// ===== Cursor trail effect =====
+(function() {
+  const colors = ['#ffaacc', '#aaeeff', '#ffffcc', '#ddbbff', '#ccddff'];
+  let throttle = false;
+  document.addEventListener('mousemove', function(e) {
+    if (throttle) return;
+    throttle = true;
+    setTimeout(() => throttle = false, 60);
+    const dot = document.createElement('div');
+    dot.className = 'trail-dot';
+    dot.style.left = e.clientX + 'px';
+    dot.style.top = e.clientY + 'px';
+    dot.style.background = colors[Math.floor(Math.random() * colors.length)];
+    document.body.appendChild(dot);
+    setTimeout(() => dot.remove(), 500);
+  });
+})();
+</script>
+
+</body>
+</html>
