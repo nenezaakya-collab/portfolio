@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>★ 星のサプリ - kumada kanako's homepage ★</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+<!-- Floating decorations -->
+<div class="deco-float">✧</div>
+<div class="deco-float">♡</div>
+<div class="deco-float">☆</div>
+<div class="deco-float">✦</div>
+<div class="deco-float">♪</div>
+
+<!-- Starfield background -->
+<div class="starfield" id="starfield"></div>
+
+<!-- Scanlines overlay -->
+<div class="scanlines"></div>
+
+<!-- Main content -->
+<div class="main-wrapper">
+
+  <!-- Marquee -->
+  <div class="top-marquee">
+    <div class="marquee-inner">
+      <span>✦ 星のサプリ ✦ 今日もあなたに、小さな後押しを。 ✦ Hoshi no Supli ✦</span>
+      <span>✦ 星のサプリ ✦ 今日もあなたに、小さな後押しを。 ✦ Hoshi no Supli ✦</span>
+    </div>
+  </div>
+
+  <!-- App Hero -->
+  <div class="app-hero">
+    <img class="app-hero-emoji" src="Images/hoshi.png" alt="星のサプリ">
+    <div class="app-hero-title">星のサプリ</div>
+    <div class="app-hero-sub">✦ 毎朝届くやさしいホロスコープ ✦</div>
+    <div class="sparkle-divider">✧ ✦ ✧ ✦ ✧ ✦ ✧</div>
+  </div>
+
+  <hr class="pixel-hr">
+
+  <!-- ===== DETAIL WINDOW ===== -->
+  <div class="section-label">★ APP DETAIL ★</div>
+  <div class="win-window">
+    <div class="win-titlebar">
+      <span class="win-titlebar-text"><span class="icon">✦</span> hoshi_no_supli_detail.txt</span>
+      <div class="win-buttons">
+        <button class="win-btn">_</button>
+        <button class="win-btn">□</button>
+        <button class="win-btn">×</button>
+      </div>
+    </div>
+    <div class="win-body">
+      <div class="detail-content">
+
+        <h2>📖 アプリ概要</h2>
+        <p>
+          <strong>星のサプリ</strong>は、12星座の運勢を毎朝AIが生成するホロスコープWebアプリです。
+        </p>
+        <p>
+          「やさしい先輩のような語りかけ」をトーンに、日常の小さなシーンに星の後押しを添えます。読んだ後「よしっ」と前向きになれる温度感を目指しています。石井ゆかりさんのやさしさをベースに、もう少しライトに。
+        </p>
+
+        <h2>💡 コンセプト</h2>
+        <ul>
+          <li>ネガティブな表現は一切なし（低運の日も「充電日」「整える日」として肯定）</li>
+          <li>占星術の専門用語は使わない（アスペクト、ハウス等NGワード）</li>
+          <li>必ず日常の具体的なシーンを1つ以上含める</li>
+          <li>ラッキーアイテムは手に取れる身近なもの</li>
+          <li>ランキング・順位の概念は使わない</li>
+        </ul>
+
+        <h2>🚀 ユーザーフロー</h2>
+        <div class="flow-steps">
+          <div class="flow-step">
+            <span class="flow-step-num">STEP 1</span>
+            <span class="flow-step-emoji">✦</span>
+            トップ画面<br>12星座グリッドから選択
+          </div>
+          <div class="flow-step">
+            <span class="flow-step-num">STEP 2</span>
+            <span class="flow-step-emoji">📅</span>
+            期間タブ切替<br>今日・今週・今月
+          </div>
+          <div class="flow-step">
+            <span class="flow-step-num">STEP 3</span>
+            <span class="flow-step-emoji">🔮</span>
+            占い表示<br>メッセージ＋運勢ドット
+          </div>
+          <div class="flow-step">
+            <span class="flow-step-num">STEP 4</span>
+            <span class="flow-step-emoji">🍀</span>
+            ラッキー情報<br>アイテム・カラー・ナンバー
+          </div>
+          <div class="flow-step">
+            <span class="flow-step-num">STEP 5</span>
+            <span class="flow-step-emoji">📤</span>
+            シェア<br>X・LINE・コピー
+          </div>
+        </div>
+
+        <h2>⚡ 主な機能</h2>
+        <ul>
+          <li>12星座 × 3期間（今日・今週・今月）の占い</li>
+          <li>Claude APIによる占い文の毎朝自動生成（Vercel Cron）</li>
+          <li>5項目の運勢メーター（総合・恋愛・仕事・金運・健康）</li>
+          <li>ラッキーアイテム・ラッキーカラー（HEXコード付き）・ラッキーナンバー</li>
+          <li>日英2言語対応（ブラウザ言語自動検出 + 手動切替）</li>
+          <li>Framer Motionによるスタガーアニメーション</li>
+          <li>APIフォールバック（Supabase/Claude API不通時でも動作）</li>
+          <li>CDNキャッシュ（1時間）でパフォーマンス最適化</li>
+          <li>PWA対応（ホーム画面に追加可能）</li>
+        </ul>
+
+        <h2>🛠 技術スタック</h2>
+        <div class="tech-tags">
+          <span class="tech-tag">Next.js 15</span>
+          <span class="tech-tag">React 19</span>
+          <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">Tailwind CSS 4</span>
+          <span class="tech-tag">Framer Motion</span>
+          <span class="tech-tag">Claude API</span>
+          <span class="tech-tag">Supabase</span>
+          <span class="tech-tag">Vercel Cron</span>
+          <span class="tech-tag">PWA</span>
+        </div>
+
+        <h2>✦ こだわりポイント</h2>
+        <ul class="kodawari-list">
+          <li>AIプロンプト設計 ― 「やさしい先輩」のトーン、NGワード、文字数、JSON出力形式まで細かく定義。日本語/英語で異なるプロンプトを用意し、文化に合った表現を生成</li>
+          <li>グラスモーフィズム + 和のテイスト ― すりガラス風カードにゴールドのアクセント。Cormorant Garamond × しっぽり明朝のフォントペアリングで、上品かつ温かい世界観</li>
+          <li>運勢ドットのスタガーアニメーション ― 5項目の運勢メーターが順番にふわっと現れる演出。Framer MotionのstaggerChildrenで0.08秒ずつずらした入場</li>
+          <li>堅牢なフォールバック設計 ― Supabase未接続・Claude API障害時でも、ハードコードされたフォールバック占い文で必ず表示。ユーザーに空白画面を見せない</li>
+          <li>Cron自動生成 ― Vercel Cronが毎朝5時（JST）にClaude APIで12星座分を一括生成。リトライ・バックオフ・フォールバック挿入まで自動化</li>
+        </ul>
+
+        <h2>💭 つくってみて</h2>
+        <p>
+          占い文のトーン設計が一番楽しかったポイントです。AIに「やさしい先輩」を演じてもらうためのプロンプトを何度も調整しました。読んだ後にちょっとだけ前向きになれる温度感は、ネガティブを排除するだけでなく「具体的な日常のシーン」を入れることで生まれました。
+        </p>
+
+      </div>
+    </div>
+    <div class="status-bar">
+      <span>✦ 星のサプリ v1.0</span>
+      <span>Next.js / Claude API / Supabase</span>
+    </div>
+  </div>
+
+  <hr class="pixel-hr">
+
+  <!-- Action Buttons -->
+  <div class="action-buttons">
+    <a href="https://hosisapu.kanacle.com" target="_blank" rel="noopener" class="action-btn action-btn-primary">OPEN APP →</a>
+    <a href="index.html" class="action-btn action-btn-secondary">← HOME に戻る</a>
+  </div>
+
+  <hr class="pixel-hr">
+
+  <!-- Footer -->
+  <footer style="text-align: center; padding: 20px;">
+    <p style="font-family: 'DotGothic16', monospace; font-size: 13px; color: #5c3580; line-height: 2;">
+      ☆ Thanks for visiting! ☆<br>
+      <a href="index.html" style="color: #5c3580; text-decoration: none;">♡ kumada kanako's homepage ♡</a>
+    </p>
+    <div style="margin-top: 10px; font-size: 20px; letter-spacing: 6px;">
+      ✧♡☆♡✧
+    </div>
+  </footer>
+
+</div>
+
+<script>
+// ===== Generate starfield =====
+(function() {
+  const sf = document.getElementById('starfield');
+  const count = 80;
+  for (let i = 0; i < count; i++) {
+    const star = document.createElement('div');
+    star.className = 'star';
+    star.style.left = Math.random() * 100 + '%';
+    star.style.top = Math.random() * 100 + '%';
+    star.style.setProperty('--dur', (1.5 + Math.random() * 3) + 's');
+    star.style.animationDelay = (Math.random() * 3) + 's';
+    const size = Math.random() > 0.8 ? 3 : (Math.random() > 0.5 ? 2 : 1);
+    star.style.width = size + 'px';
+    star.style.height = size + 'px';
+    const colors = ['#fff', '#ffddee', '#eeddff', '#ddeeff', '#ffffdd'];
+    star.style.background = colors[Math.floor(Math.random() * colors.length)];
+    sf.appendChild(star);
+  }
+})();
+
+// ===== Cursor trail effect =====
+(function() {
+  const colors = ['#ffaacc', '#aaeeff', '#ffffcc', '#ddbbff', '#ccddff'];
+  let throttle = false;
+  document.addEventListener('mousemove', function(e) {
+    if (throttle) return;
+    throttle = true;
+    setTimeout(() => throttle = false, 60);
+    const dot = document.createElement('div');
+    dot.className = 'trail-dot';
+    dot.style.left = e.clientX + 'px';
+    dot.style.top = e.clientY + 'px';
+    dot.style.background = colors[Math.floor(Math.random() * colors.length)];
+    document.body.appendChild(dot);
+    setTimeout(() => dot.remove(), 500);
+  });
+})();
+</script>
+
+</body>
+</html>
